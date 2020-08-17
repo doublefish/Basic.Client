@@ -1,0 +1,79 @@
+﻿@page "{id:int}"
+@{
+	ViewData["Title"] = "编辑";
+	var Id = RouteData.Values["id"];
+}
+
+<div class="layui-card">
+	<div class="layui-card-body">
+		<form class="layui-form" lay-filter="edit">
+			<input type="hidden" name="Id" id="Id" value="@Id" />
+			<div class="layui-form-item">
+				<label class="layui-form-label">用户名</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Username" id="Username" placeholder="请输入" lay-verify="required|username" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请输入4到20位字符的用户名</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">昵称</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Nickname" id="Nickname" placeholder="请输入" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请输入10个字符以内的昵称</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">姓氏</label>
+				<div class="layui-input-inline" style="width: 15%;">
+					<input type="text" class="layui-input" name="LastName" id="LastName" placeholder="请输入" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid">名字</div>
+				<div class="layui-input-inline" style="width: 15%;">
+					<input type="text" class="layui-input" name="FirstName" id="FirstName" placeholder="请输入" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请输入姓名</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">电子邮箱</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Email" id="Email" placeholder="请输入" lay-verify="mail" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请输入电子邮箱</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">手机号码</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Mobile" id="Mobile" placeholder="请输入" lay-verify="mobile" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请输入手机号码</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">固定电话</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Tel" id="Tel" placeholder="请输入" lay-verify="tel" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请输入固定电话</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">是否启用</label>
+				<div class="layui-input-inline">
+					<input type="checkbox" name="Status" id="Status" lay-skin="switch" lay-text="是|否" lay-filter="Status" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请选择是否启用</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">描述</label>
+				<div class="layui-input-block">
+					<textarea class="layui-textarea" name="Note" id="Note" lay-verify="note" placeholder="请输入"></textarea>
+				</div>
+				<div class="layui-input-block">
+					<div class="layui-form-mid layui-word-aux">请输入200个字符以内的描述</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/account/edit.js?v=20200304"></script>
+}

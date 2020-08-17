@@ -1,0 +1,89 @@
+﻿@page "{id:int}"
+@{
+	ViewData["Title"] = "编辑";
+	var Id = RouteData.Values["id"];
+}
+
+<div class="layui-card">
+	<div class="layui-card-body">
+		<form class="layui-form" lay-filter="edit">
+			<input type="hidden" name="Id" id="Id" value="@Id" />
+			<div class="layui-form-item">
+				<label class="layui-form-label">标题</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="Title" id="Title" placeholder="请输入" lay-verify="required|title" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">版块</label>
+				<div class="layui-input-block" id="SectionNames">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">摘要</label>
+				<div class="layui-input-block">
+					<textarea class="layui-textarea" name="Summary" id="Summary" placeholder="请输入" lay-verify="summary"></textarea>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">作者</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Author" id="Author" placeholder="请输入" lay-verify="author" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请输入20个字符以内的作者</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">来源</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Source" id="Source" placeholder="请输入" lay-verify="source" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请输入20个字符以内的来源</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">封面</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="Cover" id="Cover" placeholder="请输入" lay-verify="cover" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">内容</label>
+				<div class="layui-input-block">
+					<textarea class="layui-textarea" name="Content" id="Content" placeholder="请输入" lay-verify="content" style="height:250px;"></textarea>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">发布时间</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="ReleaseTime" id="ReleaseTime" placeholder="请输入" lay-verify="date" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请输入20个字符以内的来源</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">是否置顶</label>
+				<div class="layui-input-block">
+					<input type="checkbox" name="IsStick" id="IsStick" lay-skin="switch" lay-text="是|否" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请选择是否置顶</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">状态</label>
+				<div class="layui-input-inline">
+					<select name="Status" id="Status" lay-verify="required">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+				<div class="layui-form-mid layui-word-aux">请选择状态</div>
+			</div>
+			<div class="layui-form-item layui-hide">
+				<div class="layui-input-block">
+					<button type="button" class="layui-btn" lay-submit="" lay-filter="submit" id="submit">提交</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/lib/tinymce/tinymce.min.js"></script>
+	<script src="~/js/article/edit.js?v=20200105"></script>
+}

@@ -1,0 +1,35 @@
+﻿@page "{id:int}/{property}"
+@{
+	var Id = RouteData.Values["id"];
+	var Property = RouteData.Values["property"];
+	var PropertyName = "";
+	switch (Property)
+	{
+		case "Feature": PropertyName = "特色"; break;
+		case "Notice": PropertyName = "预定须知"; break;
+		case "Cost": PropertyName = "费用说明"; break;
+		case "Book": PropertyName = "预定须知"; break;
+		default: break;
+	}
+	ViewData["Title"] = "编辑" + PropertyName;
+}
+
+<div class="layui-card">
+	<div class="layui-card-body">
+		<form class="layui-form" lay-filter="edit">
+			<input type="hidden" name="Id" id="Id" value="@Id" />
+			<input type="hidden" name="Property" id="Property" value="@Property" />
+			<div class="layui-form-item">
+				<textarea class="layui-textarea" name="Content" id="Content" placeholder="请输入" style="height:400px;"></textarea>
+			</div>
+			<div class="layui-form-item layui-hide">
+				<button type="button" class="layui-btn" lay-submit="" lay-filter="submit" id="submit">提交</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/lib/tinymce/tinymce.min.js"></script>
+	<script src="~/js/product/editContent.js?v=20200401"></script>
+}

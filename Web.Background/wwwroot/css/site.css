@@ -1,0 +1,5 @@
+﻿.layui-layout-admin .layui-logo { background: url(../images/logo.png) no-repeat center center; background-size: 165.6px 42.4px; }
+.layui-layout-admin .layui-logo span { padding: 0 36px; background: url(../images/logo.png) no-repeat left center; display: inline-block; }
+.layui-card .layui-card-body:nth-child(2n) { border-top: 1px solid #f6f6f6; }
+.layui-card-body > div.tools { padding-bottom: 10px; }
+.layui-span { display: inline-block; padding: 9px 0; line-height: 20px; color: #999 !important; }

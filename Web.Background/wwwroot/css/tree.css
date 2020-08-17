@@ -1,0 +1,4 @@
+﻿.ztree { height: 720px; overflow-y: auto; }
+#rMenu { padding: 1px; margin: 0; text-align: left; border: solid 1px #718BB7; position: absolute; z-index: 100; display: none; }
+#rMenu li { margin: 0px; padding: 0 1px 0 20px; cursor: pointer; list-style: none outside none; line-height: 22px; background-color: #F0F0F0; }
+#rMenu li:hover { background-color: #D9E8FB; border: solid 1px #718BB7; }

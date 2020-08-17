@@ -1,0 +1,115 @@
+﻿@page "{id:int}"
+@{
+	ViewData["Title"] = "完成";
+	var Id = RouteData.Values["id"];
+}
+
+<input type="hidden" name="Id" id="Id" value="@Id" />
+<div class="layui-card">
+	<div class="layui-card-header">订单信息</div>
+	<div class="layui-card-body">
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">订单编号</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="Number"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">成交总价</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="TotalPrice"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="layui-card-header" id="divPromoter0" style="display: none;">推广人</div>
+	<div class="layui-card-body" id="divPromoter1" style="display: none;">
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">推广人用户</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="PromoterUsername"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">推广人姓名</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="PromoterFullName"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">佣金比例</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="PromoterRate"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">佣金金额</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="PromoterAmount"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="layui-card-header" id="divAgent0" style="display: none;">代理商</div>
+	<div class="layui-card-body" id="divAgent1" style="display: none;">
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">代理商名称</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="AgentName"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">上级名称</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="AgentParentName"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">业务员用户</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="AgentUserUsername"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">业务员姓名</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="AgentUserFullName"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">佣金比例</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="AgentUserRate"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">佣金金额</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="AgentUserAmount"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="layui-card-body">
+		<form class="layui-form" lay-filter="edit">
+			<div class="layui-form-item layui-hide">
+				<div class="layui-input-block">
+					<button type="button" class="layui-btn" lay-submit="" lay-filter="submit" id="submit">提交</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/order/complete.js?v=20200424"></script>
+}

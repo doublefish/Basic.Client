@@ -1,0 +1,76 @@
+﻿@page
+@{
+	ViewData["Title"] = "佣金记录";
+}
+
+<div class="layui-card">
+	<form class="layui-card-body layui-form" method="get" lay-filter="search">
+		<div class="layui-form-item">
+			<div class="layui-inline">
+				<label class="layui-form-label">代理商名称</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="agentName" id="agentName" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">业务员用户</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="agentUsername" id="agentUsername" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">业务员手机</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="agentUserMobile" id="agentUserMobile" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">订单编号</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="orderNumber" id="orderNumber" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			@*<div class="layui-inline">
+					<label class="layui-form-label">订单用户名</label>
+					<div class="layui-input-block">
+						<input type="text" class="layui-input" name="orderUsername" id="orderUsername" placeholder="请输入" autocomplete="off" />
+					</div>
+				</div>*@
+			<div class="layui-inline">
+				<label class="layui-form-label">状态</label>
+				<div class="layui-input-block">
+					<select name="status" id="status">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">生成时间</label>
+				<div class="layui-input-inline" style="width: 100px;">
+					<input type="text" class="layui-input" name="start" id="start" placeholder="请输入" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid">-</div>
+				<div class="layui-input-inline" style="width: 100px;">
+					<input type="text" class="layui-input" name="end" id="end" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-inline">
+				<button type="submit" class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon layui-icon-search layuiadmin-button-btn"></i></button>
+			</div>
+		</div>
+	</form>
+	<div class="layui-card-body">
+		<table lay-filter="list" id="list"></table>
+		<fieldset class="layui-elem-field">
+			<legend>状态说明</legend>
+			<div class="layui-field-box">
+				已支付：佣金已支付给一级代理商，但一级代理商还未分配给其下级代理商；<br />
+				已分配：一级代理商直接推广的用户，或一级代理商已分配给其下级代理商。
+			</div>
+		</fieldset>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/agent/user/commissions.js?v=20200402"></script>
+}

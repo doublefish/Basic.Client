@@ -1,0 +1,22 @@
+﻿@page "{roleId:int}"
+@{
+	ViewData["Title"] = "菜单";
+	var RoleId = RouteData.Values["roleId"];
+}
+
+@section Styles{
+	<link href="~/lib/jquery.ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+	<link href="~/css/tree.css" rel="stylesheet" />
+}
+
+<form class="layui-card-body layui-form" lay-filter="menu">
+	<input type="hidden" name="RoleId" id="RoleId" value="@RoleId" />
+	<ul class="ztree" id="tree"></ul>
+	<input type="button" class="layui-btn layui-hide" lay-submit="" lay-filter="submit" id="submit" value="提交" />
+</form>
+
+@section Scripts{
+	<script src="~/lib/jquery.ztree/js/jquery.ztree.core.min.js"></script>
+	<script src="~/lib/jquery.ztree/js/jquery.ztree.excheck.min.js"></script>
+	<script src="~/js/role/menus.js?v=20200402"></script>
+}

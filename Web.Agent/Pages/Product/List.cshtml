@@ -1,0 +1,66 @@
+﻿@page
+@{
+	ViewData["Title"] = "产品管理";
+}
+
+<div class="layui-card">
+	<form class="layui-card-body layui-form" method="get" lay-filter="search">
+		<div class="layui-form-item">
+			<label class="layui-form-label">标签</label>
+			<div class="layui-input-block" id="tag"></div>
+			<input type="hidden" name="tags" id="tags" />
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">主题</label>
+			<div class="layui-input-block" id="theme"></div>
+			<input type="hidden" name="themes" id="themes" />
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">目的地</label>
+			<div class="layui-input-block" id="destination"></div>
+			<input type="hidden" name="destinations" id="destinations" />
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">出发地</label>
+			<div class="layui-input-block" id="departure"></div>
+			<input type="hidden" name="departures" id="departures" />
+		</div>
+		<div class="layui-form-item">
+			<div class="layui-inline">
+				<label class="layui-form-label">名称</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="name" id="name" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">类型</label>
+				<div class="layui-input-block">
+					<select name="type" id="type">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">状态</label>
+				<div class="layui-input-block">
+					<select name="status" id="status">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-inline">
+				<button type="submit" class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon layui-icon-search layuiadmin-button-btn"></i></button>
+			</div>
+		</div>
+	</form>
+	<div class="layui-card-body">
+		<div class="tools">
+			<button type="button" class="layui-btn" data-type="addCommissionRules" style="display: none;"><i class="layui-icon layui-icon-rmb"></i>添加佣金规则</button>
+		</div>
+		<table lay-filter="list" id="list"></table>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/product/list.js?v=20200420"></script>
+}

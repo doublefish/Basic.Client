@@ -1,0 +1,12 @@
+﻿@page "{id:int}"
+@{
+	Layout = "_EmptyLayout";
+	ViewData["Title"] = "产品预定";
+	var Id = RouteData.Values["id"];
+}
+
+<input type="hidden" name="Id" id="Id" value="@Id" />
+
+@section Scripts{
+	<script src="~/js/product/order.js?v=20200108"></script>
+}

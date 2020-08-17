@@ -1,0 +1,78 @@
+﻿@page "{id:int}/{productIds?}"
+@{
+	ViewData["Title"] = "编辑";
+	var Id = RouteData.Values["id"];
+	var ProductIds = RouteData.Values["productIds"];
+}
+
+@section Styles{
+	<style>
+		.layui-form-item .layui-form-label { width: 120px; }
+		.layui-form-item .layui-input-inline { width: 100px; }
+		.layui-form-item .layui-input-block { margin-left: 150px; }
+	</style>
+}
+
+<div class="layui-card">
+	<div class="layui-card-body">
+		<form class="layui-form" lay-filter="edit">
+			<input type="hidden" name="Id" id="Id" value="@Id" />
+			<input type="hidden" name="ProductIds" id="ProductIds" value="@ProductIds" />
+			<div class="layui-form-item">
+				<label class="layui-form-label">有效期限</label>
+				<div class="layui-input-inline">
+					<select name="Year" id="Year" lay-verify="required">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+				<div class="layui-input-inline">
+					<select name="Month" id="Month" lay-verify="required">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+				<div class="layui-form-mid layui-word-aux">请选择有效期限</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">代理商佣金比例</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="AgentRate" id="AgentRate" placeholder="请输入" lay-verify="rate" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid">%</div>
+				<div class="layui-form-mid layui-word-aux">请输入代理商佣金比例，优先级高于佣金金额</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">代理商佣金金额</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="AgentAmount" id="AgentAmount" placeholder="请输入" lay-verify="amount" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid">元</div>
+				<div class="layui-form-mid layui-word-aux">请输入代理商佣金金额</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">个人佣金比例</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="PersonalRate" id="PersonalRate" placeholder="请输入" lay-verify="rate" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid">%</div>
+				<div class="layui-form-mid layui-word-aux">请输入个人佣金比例，优先级高于佣金金额</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">个人佣金金额</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="PersonalAmount" id="PersonalAmount" placeholder="请输入" lay-verify="amount" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid">元</div>
+				<div class="layui-form-mid layui-word-aux">请输入个人佣金金额</div>
+			</div>
+			<div class="layui-form-item layui-hide">
+				<div class="layui-input-block">
+					<button type="button" class="layui-btn" lay-submit="" lay-filter="submit" id="submit">提交</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/product/commissionRule/edit.js?v=20200407"></script>
+}

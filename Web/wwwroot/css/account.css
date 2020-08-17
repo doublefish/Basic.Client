@@ -1,0 +1,237 @@
+﻿/* layui样式 */
+.layui-input:hover,
+.layui-textarea:hover { border-color: #e6e6e6 !important }
+
+.layui-input:focus,
+.layui-textarea:focus { border-color: #64BDFF !important }
+
+.login-center .layui-form-select .layui-input:focus, .login-center .layui-input:focus { border-color: #64BDFF !important; box-shadow: 0px 0px 6px rgba(36,127,255,0.6); background-color: #fff; }
+
+
+/* 弹框 */
+.layui-layer { box-shadow: 0px 0px 20px rgba(0,0,0,0.12) !important; }
+.layui-layer .layui-layer-title { background-color: #fff; font-weight: bold; border-bottom: 1px solid #F8F8F8; }
+.layui-layer .layui-layer-btn { width: 320px; margin: auto; display: flex; justify-content: space-between; padding: 30px 20px 25px 20px; }
+.layui-layer .layui-layer-btn a { font-size: 14px; color: #999; width: 120px; height: 40px; text-align: center; line-height: 40px; border-color: #E4E4E4; background: #E4E4E4; padding: 0; }
+.layui-layer .layui-layer-btn .layui-layer-btn0 { background: #247FFF; color: #fff; }
+
+/* 修改头像 */
+.photo-top { padding: 17px 23px 34px 23px; }
+.photo-top p { font-size: 14px; color: #333; margin-bottom: 30px; }
+.photo-top .photo-list li { display: inline-block; *display: inline; *zoom: 1; width: 32%; font-size: 10px; color: #999; line-height: 24px; text-align: center; vertical-align: bottom; }
+.photo-top .photo-list li img { display: block; margin: 0 auto 5px auto; }
+.photo-top .photo-list li:first-child img { width: 70px; height: 70px; border-radius: 100%; }
+.photo-top .photo-list li:nth-child(2) img { width: 50px; height: 50px; border-radius: 100%; }
+.photo-top .photo-list li:last-child img { width: 30px; height: 30px; border-radius: 100%; }
+.upload-wrap { padding: 17px 23px; border-top: 1px solid #F8F8F8; }
+.upload-wrap p { font-size: 14px; color: #999; line-height: 22px; }
+.upload-wrap a.upload { display: inline-block; width: 80px; height: 30px; border: 1px solid #247FFF; border-radius: 3px; font-size: 14px; color: #247FFF; text-align: center; line-height: 30px; }
+/* 修改昵称 */
+.pop-name { padding: 17px 23px 34px 23px; }
+.name-input label { display: inline-block; width: 78px; font-size: 14px; color: #333; line-height: 40px; }
+.name-input p { position: relative; }
+.name-input input { width: 208px; height: 38px; font-size: 14px; color: #333; border: 1px solid #F1F1F1; border-radius: 3px; padding: 0 20px; }
+.name-input p i { display: inline-block; width: 14px; height: 14px; border-radius: 100%; background: url(../img/self/tc_sc-1.png) no-repeat; position: absolute; top: 13px; right: 15px; }
+/* 提现 */
+.pop-deposit { text-align: center; padding: 45px; }
+.pop-success button.know { width: 120px; height: 40px; margin-top: 40px; }
+
+/* 登录 */
+.header-center { width: 100%; min-width: 1200px; height: 98px; background: #fff; position: relative; z-index: 9; }
+.header-login { width: 1200px; height: 98px; margin: auto; }
+.header-login img { margin-top: 15px; }
+.header-login span { display: inline-block; font-size: 16px; color: #333; vertical-align: -27px; margin-left: 10px; }
+.login-container { width: 100%; min-width: 1200px; height: 100%; position: absolute; top: 0; left: 0; background: url(../img/self/denglu_bg.png) no-repeat; background-size: 100% 100%; }
+.login-wrap { width: 1200px; padding-top: 220px; overflow: hidden; margin: 0 auto 0 auto; }
+.login-input { float: right; width: 420px; background: #fff; border-radius: 5px; }
+.login-input form { padding: 0 65px; }
+.login-center h3 { font-size: 34px; color: #333; text-align: center; padding: 27px 0 30px 0; }
+.login-center .layui-input-block { margin-left: 0; position: relative; }
+.login-center .layui-form-select .layui-input, .login-center .layui-input { font-size: 14px; color: #000; height: 35px; background: #F6F7F9; border-color: #F6F7F9; text-align: left; }
+.login-center .layui-form-select .layui-input::-webkit-input-placeholder, .login-center .layui-input::-webkit-input-placeholder { font-size: 14px; color: #ADB3BF; }
+.login-center .phone { padding-left: 32px; background: url(../img/self/zc_sjh.png) 9px center no-repeat #F6F7F9; }
+.login-center .password { padding-left: 32px; background: url(../img/self/zc_mm.png) 9px center no-repeat #F6F7F9; }
+.login-center .yanz { padding-left: 32px; background: url(../img/self/zc_yzm.png) 9px center no-repeat #F6F7F9; }
+.login-center .layui-input:hover,
+.login-center .layui-textarea:hover { border-color: #F6F7F9 !important }
+.login-center .layui-form-select .layui-edge { display: inline-block; width: 12px; height: 12px; background: url(../img/self/sl.png) no-repeat; border: none }
+.login-center .layui-btn { width: 100%; height: 35px; border-radius: 5px; margin: 20px 0 15px 0; }
+.login-center .tips { height: 20px; font-size: 12px; color: #666; margin-top: 15px; padding-left: 20px; }
+.tips span { display: none; }
+.register-center { padding: 0 65px; font-size: 12px; color: #ADB3BF; margin-bottom: 33px; }
+.register-center a.zhuce { color: #247FFF; }
+.register-center a { color: #ADB3BF; }
+.register-plan { padding: 14px 0 23px 0; background: #F6F6F6; border-radius: 0 0 5px 5px; }
+.register-plan .title { font-size: 12px; color: #333; text-align: center; margin-bottom: 18px; }
+.register-plan p.img { text-align: center; }
+.register-plan p.img a { display: inline-block; width: 29px; height: 29px; border-radius: 100%; margin: 0 15px; }
+.login-center .layui-form-select dl dd, .login-center .layui-form-select dl dt { text-align: left; }
+.register-plan p.img a.weibo { background: url(../img/self/wb_wx.png) no-repeat; }
+.register-plan p.img a.qq { background: url(../img/self/qq_wx.png) no-repeat; }
+.register-plan p.img a.weixin { background: url(../img/self/wx_wx.png) no-repeat; }
+.register-plan p.img a.weibo:hover { background: url(../img/self/wb_yx.png) no-repeat; }
+.register-plan p.img a.qq:hover { background: url(../img/self/qq_yx.png) no-repeat; }
+.register-plan p.img a.weixin:hover { background: url(../img/self/wx_yx.png) no-repeat; }
+
+/* 注册 */
+.regiser-container { min-width: 1200px; height: auto; top: 98px; background: url(../img/self/zhuce_bg.png) no-repeat; background-size: 100% 100%; padding: 0 0 111px 0; /* margin-top: -98px; */ }
+.zhuce-center { width: 640px; border-radius: 5px; margin: 40px auto 0 auto; /* background: url(../img/self/zc_bg_sm.png) 95% bottom no-repeat #fff; */ background-size: 31% auto; }
+.zhuce-center form { width: 290px; margin: auto; }
+.zhuce-center .register-center { width: 290px; margin: 0 auto 20px auto; }
+.zhuce-center .register-plan { width: 50%; margin: auto; background: none; border-top: 1px solid #E5E5E5; }
+.zhuce-center .register-plan .title { color: #999; }
+.zhuce-center .layui-form-item { margin-bottom: 20px; }
+.login-center .layui-input-block .tux { display: inline-block; width: 85px; height: 35px; border-radius: 0 5px 5px 0; position: absolute; top: 0; right: 0; }
+.login-center .layui-input-block .tux img { width: 85px; height: 35px; }
+.login-center .layui-input-block i.huan { font-size: 12px; color: #333; position: absolute; right: -100px; top: 10px; }
+.login-center .layui-input-block i.huan a { color: #247FFF; }
+.login-center .layui-input-block i.mima { right: -190px; padding-left: 20px; background: url(../img/self/dl_cwtx.png) left center no-repeat; }
+.login-center .layui-input-block i.yanzm { right: -180px; padding-left: 20px; background: url(../img/self/dl_zq.png) left center no-repeat; }
+.login-center .layui-input-block .btn { position: absolute; right: 0; top: 0; font-size: 14px; color: #fff; width: 98px; height: 35px; border-radius: 0 5px 5px 0; background: #247FFF; }
+
+/* 找回密码 */
+.password-container { width: 100%; min-width: 1200px; height: 100%; background: url(../img/self/zhmm_bg.png) no-repeat; background-size: 100% 100%; position: absolute; top: 0; left: 0; overflow-y: auto; }
+.password-center { width: 1100px; min-height: 630px; padding-top: 30px; background: #fff; border-radius: 5px; margin: 180px auto 0 auto; }
+.password-list ul { width: 700px; margin: 0 auto 70px auto; display: flex; justify-content: space-around; }
+.password-list ul li { width: 180px; padding: 10px 0; font-size: 16px; color: #999; text-align: right; background: url(../img/self/zhmm_wx.png) -3px center no-repeat; }
+.password-list ul li:last-child { background: url(../img/self/zhmm_wx.png) 30px center no-repeat; }
+.password-list ul li span { font-weight: bold; }
+.password-list ul li.active { background-image: url(../img/self/zhmm_yx.png); color: #247FFF; }
+.password-list ul li.active span { color: #fff; }
+.password-center form { width: 290px; margin: auto; }
+.password-center .layui-form-item { margin-bottom: 20px; }
+.login-center .layui-input-block i.yonghu { right: -190px; padding-left: 20px; background: url(../img/self/dl_cwts.png) left center no-repeat; }
+.mima-center p.set { font-size: 18px; color: #333; text-align: center; padding-top: 80px; background: url(../img/self/cheng.png) center 20px no-repeat; margin-bottom: 20px; }
+
+/* 账户信息 */
+.account-container { width: 100%; min-width: 1200px; background: #F8F8F8; padding: 20px 0 30px 0; }
+.account-wrap { width: 1050px; min-height: 640px; margin: auto; }
+.account-left { width: 170px; min-height: 665px; background: #fff; border-radius: 3px; }
+.account-left .self-center { font-size: 16px; color: #fff; text-align: center; padding: 5px 0; background: url(../img/self/gr_bg.png) no-repeat; }
+.account-left .self-center small { font-size: 10px; }
+.account-list { padding-left: 15px; }
+.account-list li a { display: block; font-size: 16px; color: #333; padding-left: 40px; height: 40px; line-height: 40px; margin: 13px 0; }
+.account-list li a i { display: inline-block; width: 10px; height: 10px; background: url(../img/self/sl.png) no-repeat; margin-left: 15px; }
+.account-list li.active a { border-radius: 3px 0 0 3px; }
+.account-list li:first-child a { background: url(../img/self/gr_zhxx_wx.png) 10px center no-repeat; }
+.account-list li:first-child.active a { font-weight: bold; color: #247FFF; background: url(../img/self/gr_zhxx_yx.png) 10px center no-repeat #F8F8F8; }
+.account-list li:nth-child(2) a { background: url(../img/self/gr_zhaq_wx.png) 10px center no-repeat; }
+.account-list li:nth-child(2).active a { font-weight: bold; color: #247FFF; background: url(../img/self/gr_zhaq_yx.png) 10px center no-repeat #F8F8F8; }
+.account-list li:nth-child(3) a { background: url(../img/self/gr_wdtg_wx.png) 10px center no-repeat; }
+.account-list li:nth-child(3).active a { font-weight: bold; color: #247FFF; background: url(../img/self/gr_wdtg_yx.png) 10px center no-repeat #F8F8F8; }
+.account-list li:nth-child(4) a { background: url(../img/self/gr_wyft_wx.png) 10px center no-repeat; }
+.account-list li:nth-child(4).active a { font-weight: bold; color: #247FFF; background: url(../img/self/gr_wyft_yx.png) 10px center no-repeat #F8F8F8; }
+.account-list li:nth-child(5) a { background: url(../img/self/gr_wyct_wx.png) 10px center no-repeat; }
+.account-list li:nth-child(5).active a { font-weight: bold; color: #247FFF; background: url(../img/self/gr_wyct_yx.png) 10px center no-repeat #F8F8F8; }
+.account-list li:nth-child(6) a { background: url(../img/self/gr_cyxx_wx.png) 10px center no-repeat; }
+.account-list li:nth-child(6).active a { font-weight: bold; color: #247FFF; background: url(../img/self/gr_cyxx_yx.png) 10px center no-repeat #F8F8F8; }
+
+.account-right { width: 865px; min-height: 665px; }
+.account-xinxi { background: #fff; border-radius: 3px 3px 0 0; }
+.account-xinxi h4 { font-size: 14px; font-weight: bold; padding: 10px 20px; border-bottom: 1px solid #F8F8F8; }
+.account-xinxi .zccount-toux { padding: 20px 20px 10px 20px; }
+.zccount-toux .toux { font-size: 12px; color: #A1ADBE; text-align: center; margin-right: 10px; }
+.zccount-toux .toux img { width: 70px; height: 70px; border-radius: 100%; margin-bottom: 5px; }
+.zccount-toux .toux p.change { cursor: pointer; }
+.name-list p { font-size: 14px; color: #333; margin-top: 12px; }
+.name-list p label { display: inline-block; width: 60px; color: #999; }
+.name-list p small { color: #A1ADBE; margin-left: 35px; cursor: pointer; }
+.email-list p { display: inline-block; margin-right: 50px; margin-top: 30px; position: relative; }
+.email-list p span { display: inline-block; width: 80px; height: 22px; font-size: 12px; color: #C2AC63; text-align: center; line-height: 22px; background: #FCFAE2; box-shadow: 0px 0px 5px rgba(184,177,118,0.4); position: absolute; bottom: -10px; right: -78px; }
+
+.account-center { padding: 22px 20px; min-height: 445px; background: #fff; margin-top: 15px; }
+.account-center .selfcenter-list li { float: left; margin-right: 20px; width: 224px; height: 65px; padding: 17px 18px 18px 18px; margin-bottom: 65px; }
+.account-center .selfcenter-list li p.money { font-size: 14px; color: #fff; }
+.account-center .selfcenter-list li p.money b { font-size: 26px; }
+.account-center .selfcenter-list li:nth-of-type(3n) { margin-right: 0; }
+.account-center .selfcenter-list li:first-child { background: url(../img/self/zc_zzc_bg.png) no-repeat; }
+.account-center .selfcenter-list li:nth-child(2) { background: url(../img/self/zc_ktx_bg.png) no-repeat; }
+.account-center .selfcenter-list li:nth-child(3) { background: url(../img/self/zc_lj_bg.png) no-repeat; }
+.account-center .selfcenter-list li:nth-child(4) { background: url(../img/self/zc_grtg_bg.png) no-repeat; }
+.account-center .selfcenter-list li:nth-child(5) { background: url(../img/self/zc_wdft_bg.png) no-repeat; }
+.account-center .selfcenter-list li p.icon { font-size: 16px; color: #fff; padding-left: 30px; margin-bottom: 15px; }
+.account-center .selfcenter-list li:first-child p.icon { background: url(../img/self/zc_zzc.png) left center no-repeat; }
+.account-center .selfcenter-list li:nth-child(2) p.icon { background: url(../img/self/zc_ktx.png) left center no-repeat; }
+.account-center .selfcenter-list li:nth-child(3) p.icon { background: url(../img/self/zc_lj.png) left center no-repeat; }
+.account-center .selfcenter-list li:nth-child(4) p.icon { background: url(../img/self/zc_grtg.png) left center no-repeat; }
+.account-center .selfcenter-list li:nth-child(5) p.icon { background: url(../img/self/zc_wdft.png) left center no-repeat; }
+.account-center .selfcenter-list li p a { display: inline-block; float: right; width: 60px; height: 30px; border: 1px solid #fff; border-radius: 2px; font-size: 14px; color: #fff; text-align: center; line-height: 30px; }
+
+/* 账户安全 */
+.security-wrap { background: #fff; min-height: 625px; }
+.security-wrap .security-list li { font-size: 14px; padding: 30px 20px 25px 20px; border-bottom: 1px solid #F1F1F1; }
+.security-wrap .security-list li label { display: inline-block; width: 105px; color: #666; }
+.security-wrap .security-list li span { display: inline-block; color: #999; width: 330px; margin-left: 40px; }
+.security-wrap .security-list li a { display: inline-block; width: 70px; height: 30px; background: #FBB336; border-radius: 3px; font-size: 14px; color: #fff; text-align: center; line-height: 30px; }
+.security-wrap .security-list li a.xiug-bg { background: #247FFF; }
+
+/* 邮箱验证 */
+.email-wrap { padding: 0 20px; }
+.security-input { padding: 25px 0 0 0; }
+.security-input label { display: inline-block; width: 90px; }
+.security-input input { width: 222px; height: 38px; border: 1px solid #F1F1F1; border-radius: 3px; padding: 0 13px; }
+.group-btn button { width: 120px; height: 40px; margin: 70px 45px 0 45px; }
+.group-btn button.close { background: #E4E4E4 !important; border-color: #E4E4E4; color: #999; }
+
+/* 绑定银行卡 */
+.back-input input { height: 40px; }
+.back-input .layui-input-block { width: 330px; }
+.back-input .layui-form-label { line-height: 22px; }
+.email-wrap .layui-form-item { padding-top: 20px; margin-bottom: 0; }
+.back-input .layui-input, .back-input .layui-select, .back-input .layui-textarea { padding-left: 15px; }
+.back-input .layui-form-select dl dd, .layui-form-select dl dt { text-align: left; }
+.back-input .layui-form-select .layui-edge { display: inline-block; width: 12px; height: 12px; border: none; background: url(../img/self/xiala.png) no-repeat; }
+.back-input .layui-form-item p.phone-list { display: inline-block; font-size: 16px; line-height: 40px; margin-left: 15px; }
+.back-input .layui-input-block span.tuxyz { position: absolute; top: 0; right: 0; }
+.back-input .layui-input-block span.tuxyz img { width: 80px; height: 40px; }
+.back-input .layui-input-block button.yanz { font-size: 14px; width: 110px; height: 40px; border-radius: 0 3px 3px 0; position: absolute; right: 0; top: 0; }
+.tips-cener { font-size: 12px; color: #999; margin-top: 55px; }
+.tips-cener span { display: block; color: #FF331C; margin-bottom: 10px; }
+
+/* 我的推广 */
+.popularize-wrap { font-size: 16px; padding: 20px 55px 35px 12px; background: #fff; text-align: center; }
+.popularize-wrap span { display: block; text-align: center; margin: 15px 0 12px 0; }
+.popularize-wrap a { display: inline-block; width: 260px; height: 40px; background: #247FFF; border-radius: 5px; font-size: 16px; color: #fff; text-align: center; line-height: 40px; margin-top: 45px; }
+.popularize-wrap a:hover { opacity: .9; }
+.popular-left .ewm { width: 120px; height: 120px; margin: auto; }
+.popular-right .lianjie { height: 100px; padding: 20px 22px 0 17px; background: #F8F8F8; text-align: left; color: #666; }
+.popular-table { min-height: 280px; background: #fff; }
+.popular-table tr th { font-size: 14px; color: #999; font-weight: normal; padding: 14px 0 13px 0; text-align: center; }
+.popular-table tr td { font-size: 14px; text-align: center; height: 40px; }
+.popular-table tr:nth-of-type(even ) td { background: #F8F8F8; }
+
+/* 常用信息 */
+.common-top { min-height: 200px; background: #fff; }
+.common-address { padding: 20px 20px 30px 20px; border-bottom: 1px solid #F8F8F8; }
+.common-address a { display: inline-block; width: 90px; height: 28px; text-align: center; line-height: 28px; font-size: 12px; color: #fff; background: #247FFF; border-radius: 3px; margin: 0 15px; }
+.common-address a:hover { color: #fff; }
+.common-address small { font-size: 10px; color: #B9B8B8; }
+.common-top table thead th { font-size: 14px; font-weight: normal; color: #999; height: 40px; line-height: 40px; text-align: center; }
+.common-top table thead th.first { padding: 0 25px; text-align: left; }
+.common-top table tbody td { font-size: 14px; color: #999; height: 40px; line-height: 22px; text-align: left; padding: 15px 25px; }
+.common-top table tbody td.first { padding: 0 25px; text-align: left; }
+.common-top table tbody td.zanuw { font-size: 12px; color: #999; height: 40px; text-align: center; background: #F8F8F8; }
+.common-top table tbody tr:nth-child(2n+1) td { background: #F8F8F8; }
+.common-top table tbody td a { display: inline-block; width: 20px; height: 20px; padding: 0 10px; }
+.common-top table tbody td a.edit { background: url(../img/bianji.png) center no-repeat; }
+.common-top table tbody td a.delete { background: url(../img/shanchu.png) center no-repeat; }
+.common-tranvel { min-height: 410px; }
+
+.table-input { display: inline-block; width: 20px; height: 20px; vertical-align: 5px; padding: 0 10px; }
+.table-input .layui-form-checkbox[lay-skin=primary] { display: inline-block; width: 20px; height: 20px !important; padding: 0 !important; }
+.table-input .layui-form-checkbox[lay-skin=primary] i { width: 18px; height: 18px; min-height: 15px; border-radius: 3px; }
+.table-input .layui-form-checked[lay-skin=primary] i { background: #fff; color: #247FFF; font-size: 14px; }
+.table-input .layui-form-checkbox i { line-height: 18px !important; border-color: #247FFF !important; }
+
+.common-top .moren td { background: #fff !important; text-align: right; padding: 0 25px !important; }
+.common-top .moren td button { display: inline-block; width: 90px; height: 22px; font-size: 12px; color: #C2AC63; background: #FCFAE2 !important; border-radius: 2px; box-shadow: 0px 0px 5px rgba(184,177,118,0.4); }
+.common-tranvel table td { padding: 10px 0 !important; text-align: center !important; }
+.common-tranvel table td.first { padding-left: 30px !important; text-align: left !important; }
+
+/* 常用信息 */
+.add-address { padding: 17px 23px 34px 23px; }
+.add-address p { margin-bottom: 20px; }
+.add-address p label { display: inline-block; width: 75px; font-size: 14px; color: #333; }
+.add-address p input { width: 346px; height: 38px; font-size: 14px; color: #999; padding-left: 10px; border-radius: 3px; border: 1px solid #F1F1F1; }
+.add-address p select { width: 358px; height: 38px; font-size: 14px; color: #999; padding-left: 10px; border-radius: 3px; border: 1px solid #F1F1F1; -webkit-appearance: none; -moz-appearance: none; appearance: none; background: url(../img/self/sl.png) right center no-repeat; }
+.add-address p input::-webkit-input-placeholder, .add-address p select::-webkit-input-placeholder { font-size: 14px; color: #999999; }

@@ -1,0 +1,45 @@
+﻿@page
+@{
+	ViewData["Title"] = "我的桌面";
+}
+
+<div class="layui-row layui-col-space15">
+	<div class="layui-col-md12">
+		<div class="layui-card">
+			<div class="layui-card-body">
+				当前时间：@DateTime.Now.ToString()
+			</div>
+		</div>
+	</div>
+	<div class="layui-col-md12" id="divPromo" style="display: none;">
+		<div class="layui-row layui-col-space15">
+			<div class="layui-col-md6">
+				<div class="layui-card">
+					<div class="layui-card-body">
+						<div id="qrCode"></div>
+						<span>手机推广</span>
+						<p>你的好友通过扫描二维码进行注册达成推广</p>
+						<a id="downloadLink" style="display: none;"></a>
+						<button type="button" class="layui-btn" id="btnDownload"><i class="layui-icon">&#xe601;</i>下载二维码</button>
+					</div>
+				</div>
+			</div>
+			<div class="layui-col-md6">
+				<div class="layui-card">
+					<div class="layui-card-body">
+						<div id="url"></div>
+						<span>电脑端推广</span>
+						<p>你的好友通过访问注册链接进行注册达成推广</p>
+						<button type="button" class="layui-btn" id="btnCopy"><i class="layui-icon">&#xe641;</i>复制链接</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/lib/jquery.qrcode.min.js"></script>
+	<script src="~/lib/clipboard.min.js"></script>
+	<script src="~/js/start.js?v=20200408"></script>
+}

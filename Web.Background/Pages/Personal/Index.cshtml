@@ -1,0 +1,42 @@
+﻿@page
+@{
+	ViewData["Title"] = "个人信息";
+}
+
+<div class="layui-card">
+	<div class="layui-card-header">设置我的资料</div>
+	<div class="layui-card-body" pad15>
+		<form class="layui-form" lay-filter="modify">
+			<div class="layui-form-item">
+				<label class="layui-form-label">用户名</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Username" id="Username" disabled="disabled" />
+				</div>
+				<div class="layui-form-mid layui-word-aux" id="Username">不可修改。</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">昵称</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Nickname" id="Nickname" placeholder="请输入" lay-verify="required" lay-verType="tips" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">手机号码</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Mobile" id="Mobile" disabled="disabled" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux" id="Username">不可修改。</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+					<button type="submit" class="layui-btn" lay-submit lay-filter="submit">确认修改</button>
+					<button type="reset" class="layui-btn layui-btn-primary">重新填写</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/personal/index.js?v=20200105"></script>
+}

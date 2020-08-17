@@ -1,0 +1,47 @@
+﻿@page
+@{
+	ViewData["Title"] = "绑定银行卡";
+}
+
+<div class="layui-card">
+	<div class="layui-card-header">绑定银行卡</div>
+	<div class="layui-card-body" pad15>
+		<form class="layui-form" lay-filter="change">
+			<div class="layui-form-item">
+				<label class="layui-form-label">开户银行</label>
+				<div class="layui-input-inline">
+					<select name="BankId" id="BankId" lay-verify="required">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">卡号</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input layui-input-number" name="CardNumber" id="CardNumber" lay-verify="required|cardNumber" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">持卡人</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Cardholder" id="Cardholder" lay-verify="required|cardholder" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">支行名称</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Branch" id="Branch" lay-verify="required|branch" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+					<button type="submit" class="layui-btn" lay-submit lay-filter="submit">保存</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/personal/bankCard.js?v=20200409"></script>
+}

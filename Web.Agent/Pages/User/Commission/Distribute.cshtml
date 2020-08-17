@@ -1,0 +1,122 @@
+﻿@page "{id:int}"
+@{
+	ViewData["Title"] = "分配";
+	var Id = RouteData.Values["id"];
+}
+
+@section Styles{
+	<style>
+		.layui-form-item .layui-form-label { width: 120px; }
+		.layui-form-item .layui-input-inline { width: 100px; }
+		.layui-form-item .layui-input-block { margin-left: 150px; }
+	</style>
+}
+
+<input type="hidden" name="Id" id="Id" value="@Id" />
+<div class="layui-card">
+	<div class="layui-card-header">订单信息</div>
+	<div class="layui-card-body">
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">订单编号</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="OrderNumber"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">订单金额</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="OrderAmount"></span>
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">佣金比例</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="AgentRate"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">佣金金额</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="AgentAmount"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="layui-card-header" id="divAgent0" style="display: none;">代理商</div>
+	<div class="layui-card-body" id="divAgent1" style="display: none;">
+		<div class="layui-form">
+			<div class="layui-form-item">
+				<div class="layui-inline">
+					<label class="layui-form-label">代理商名称</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="AgentName"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">上级名称</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="AgentParentName"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">业务员用户</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="UserUsername"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">业务员姓名</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="UserFullName"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">佣金比例</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="UserRate"></span>
+					</div>
+				</div>
+				<div class="layui-inline">
+					<label class="layui-form-label">佣金金额</label>
+					<div class="layui-input-inline">
+						<span class="layui-span" id="UserAmount"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="layui-card-body" style="display: none;">
+		<form class="layui-form" lay-filter="edit">
+			<div class="layui-form-item">
+				<label class="layui-form-label">下级佣金比例</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Rate" id="Rate" placeholder="请输入" lay-verify="rate" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid">%</div>
+				<div class="layui-form-mid layui-word-aux">请输入下级佣金比例，优先级高于佣金金额</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">下级佣金金额</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Amount" id="Amount" placeholder="请输入" lay-verify="amount" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid">元</div>
+				<div class="layui-form-mid layui-word-aux">请输入下级佣金金额</div>
+			</div>
+			<div class="layui-form-item layui-hide">
+				<div class="layui-input-block">
+					<button type="button" class="layui-btn" lay-submit="" lay-filter="submit" id="submit">提交</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/user/commission/distribute.js?v=20200424"></script>
+}

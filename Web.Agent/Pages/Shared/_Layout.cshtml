@@ -1,0 +1,15 @@
+﻿@{
+	Layout = "_EmptyLayout";
+}
+
+@section Styles{
+	@RenderSection("Styles", required: false)
+}
+
+<div class="layui-fluid">
+	@RenderBody()
+</div>
+
+@section Scripts{
+	@RenderSection("Scripts", required: false)
+}

@@ -1,0 +1,9 @@
+﻿@page "{id:int}"
+@{
+	ViewData["Title"] = "产品明细";
+	var Id = RouteData.Values["id"];
+}
+
+@section Scripts{
+	<script src="~/js/product/detail.js?v=20200401"></script>
+}

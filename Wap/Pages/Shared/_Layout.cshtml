@@ -1,0 +1,37 @@
+﻿@{
+	Layout = "_EmptyLayout";
+}
+
+@section Styles{
+	@RenderSection("Styles", required: false)
+}
+
+@RenderBody()
+
+<!-- 底部 -->
+@*<div class="footer-container">
+		<footer>
+			<ul class="clear">
+				<li class="active"><a href="~/"><img src="/img/sy_yx.png" />首页</a></li>
+				<li><a href="~/product/list"><img src="/img/lc_wx.png" />甄选</a></li>
+				<li><a href="~/custom/index"><img src="/img/dz_wx.png" />定制</a></li>
+				<li><a href="~/recommend/list"><img src="/img/db_wx.png" />迪拜</a></li>
+			</ul>
+		</footer>
+	</div>*@
+
+<div class="footer-container">
+	<footer>
+		<ul class="clear">
+			<li><a href="~/index" class="ico-index">首页</a></li>
+			<li><a href="~/product/list" class="ico-product">甄选</a></li>
+			<li><a href="~/custom/order" class="ico-custom">定制</a></li>
+			<li><a href="~/recommend/list" class="ico-special">迪拜</a></li>
+		</ul>
+	</footer>
+</div>
+
+
+@section Scripts{
+	@RenderSection("Scripts", required: false)
+}

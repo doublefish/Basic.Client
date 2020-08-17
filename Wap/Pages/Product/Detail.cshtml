@@ -1,0 +1,10 @@
+﻿@page "{id:int}"
+@{
+	Layout = "_EmptyLayout";
+	ViewData["Title"] = "产品详情";
+	var Id = RouteData.Values["id"];
+}
+
+@section Scripts{
+	<script src="~/js/product/detail.js?v=20200401"></script>
+}

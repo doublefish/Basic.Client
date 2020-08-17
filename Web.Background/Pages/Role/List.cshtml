@@ -1,0 +1,39 @@
+﻿@page
+@{
+	ViewData["Title"] = "角色管理";
+}
+
+<div class="layui-card">
+	<form class="layui-card-body layui-form" method="get" lay-filter="search">
+		<div class="layui-form-item">
+			<div class="layui-inline">
+				<label class="layui-form-label">名称</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="name" id="name" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">状态</label>
+				<div class="layui-input-block">
+					<select name="status" id="status">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-inline">
+				<button type="submit" class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon layui-icon-search layuiadmin-button-btn"></i></button>
+			</div>
+		</div>
+	</form>
+	<div class="layui-card-body">
+		<div class="tools">
+			<button type="button" class="layui-btn" data-type="add" style="display: none;"><i class="layui-icon layui-icon-add-circle"></i>添加</button>
+			<button type="button" class="layui-btn layui-btn-danger" data-type="batchDel" style="display: none;"><i class="layui-icon layui-icon-delete"></i>删除</button>
+		</div>
+		<table lay-filter="list" id="list"></table>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/role/list.js?v=20200120"></script>
+}

@@ -1,0 +1,143 @@
+﻿@page
+@{
+	ViewData["Title"] = "代理商菜单";
+}
+
+@section Styles{
+	<link href="~/lib/jquery.ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+	<link href="~/css/tree.css" rel="stylesheet" />
+}
+
+<div class="layui-row layui-col-space15">
+	<div class="layui-col-md3">
+		<div class="layui-card">
+			<div class="layui-card-body">
+				<button type="button" class="layui-btn" id="btnRefreshCache">刷新缓存</button>
+				<ul class="ztree" id="tree"></ul>
+			</div>
+		</div>
+	</div>
+	<div class="layui-col-md9">
+		<div class="layui-card">
+			<div class="layui-card-body">
+				<form class="layui-form" lay-filter="edit">
+					<input type="hidden" name="Id" id="Id" />
+					<div class="layui-form-item">
+						<label class="layui-form-label">编码</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" name="Code" id="Code" placeholder="请输入" lay-verify="code" autocomplete="off" />
+						</div>
+						<div class="layui-form-mid layui-word-aux">请输入20个字符以内的编码</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">名称</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" name="Name" id="Name" placeholder="请输入" lay-verify="required|name" autocomplete="off" />
+						</div>
+						<div class="layui-form-mid layui-word-aux">请输入10个字符以内的名称</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">父节点</label>
+						<div class="layui-input-inline">
+							<input type="hidden" name="ParentId" id="ParentId" />
+							<input type="text" class="layui-input" name="ParentName" id="ParentName" disabled="disabled">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">类型</label>
+						<div class="layui-input-inline">
+							<select name="Type" id="Type" lay-verify="required">
+								<option value="" selected="selected">请选择</option>
+							</select>
+						</div>
+						<div class="layui-form-mid layui-word-aux">请选择类别</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">页面地址</label>
+						<div class="layui-input-block">
+							<input type="text" class="layui-input" name="PageUrl" id="PageUrl" placeholder="请输入" autocomplete="off" />
+						</div>
+						<div class="layui-input-block">
+							<div class="layui-form-mid layui-word-aux">请输入有效的页面地址，格式：home/index</div>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">接口地址</label>
+						<div class="layui-input-block">
+							<input type="text" class="layui-input" name="ApiUrl" id="ApiUrl" placeholder="请输入" autocomplete="off" />
+						</div>
+						<div class="layui-input-block">
+							<div class="layui-form-mid layui-word-aux">请输入有效的接口地址，格式：api/home/index</div>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">图标</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" name="Icon" id="Icon" placeholder="请输入" autocomplete="off" />
+						</div>
+						<div class="layui-form-mid layui-word-aux">请输入图标</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">等级限制</label>
+						<div class="layui-input-inline">
+							<select name="Level" id="Level" lay-verify="required">
+								<option value="2" selected="selected">不限制</option>
+								<option value="1">一级专用</option>
+							</select>
+						</div>
+						<div class="layui-form-mid layui-word-aux">请选择等级限制</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">管理员专用</label>
+						<div class="layui-input-inline">
+							<input type="checkbox" name="IsAdmin" id="IsAdmin" lay-skin="switch" lay-text="是|否" lay-filter="Status" />
+						</div>
+						<div class="layui-form-mid layui-word-aux">请选择是否管理员专用</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">顺序</label>
+						<div class="layui-input-inline">
+							<input type="text" class="layui-input" name="Sequence" id="Sequence" placeholder="请输入" lay-verify="required|number|sequence" autocomplete="off" />
+						</div>
+						<div class="layui-form-mid layui-word-aux">请输入一个不小于零的数字</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">是否启用</label>
+						<div class="layui-input-inline">
+							<input type="checkbox" name="Status" id="Status" lay-skin="switch" lay-text="是|否" lay-filter="Status" />
+						</div>
+						<div class="layui-form-mid layui-word-aux">请选择是否启用</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">描述</label>
+						<div class="layui-input-block">
+							<textarea class="layui-textarea" name="Note" id="Note" placeholder="请输入" lay-verify="note"></textarea>
+						</div>
+						<div class="layui-input-block">
+							<div class="layui-form-mid layui-word-aux">请输入200个字符以内的描述</div>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<div class="layui-input-block">
+							<button type="submit" class="layui-btn" lay-filter="save" lay-submit="" id="btnSave" style="display: none;">保存</button>
+							<button type="reset" class="layui-btn layui-btn-primary" id="btnReset" style="display: none;">重置</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ul id="rMenu">
+	<li id="addChild" style="display: none;"><a href="javascript:;">添加子级</a></li>
+	<li id="addBrother" style="display: none;"><a href="javascript:;">添加平级</a></li>
+	<li id="updateStatus" style="display: none;"><a href="javascript:;">启用</a></li>
+	<li id="del" style="display: none;"><a href="javascript:;">删除</a></li>
+</ul>
+
+@section Scripts{
+	<script src="~/lib/jquery.ztree/js/jquery.ztree.core.min.js"></script>
+	<script src="~/lib/jquery.ztree/js/jquery.ztree.excheck.min.js"></script>
+	<script src="~/js/agent/menus.js?v=20200603"></script>
+}

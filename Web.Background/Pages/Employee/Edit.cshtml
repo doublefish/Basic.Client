@@ -1,0 +1,47 @@
+﻿@page "{id:int}"
+@{
+	ViewData["Title"] = "编辑";
+	var Id = RouteData.Values["id"];
+}
+
+<div class="layui-card">
+	<div class="layui-card-body">
+		<form class="layui-form" lay-filter="edit">
+			<input type="hidden" name="Id" id="Id" value="@Id" />
+			<div class="layui-form-item">
+				<label class="layui-form-label">名称</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Name" id="Name" placeholder="请输入" lay-verify="required|name" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请输入10个字符以内的名称</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">状态</label>
+				<div class="layui-input-inline">
+					<select name="Status" id="Status" lay-verify="required">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+				<div class="layui-form-mid layui-word-aux">请选择状态</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">描述</label>
+				<div class="layui-input-block">
+					<textarea class="layui-textarea" name="Note" id="Note" placeholder="请输入" lay-verify="note"></textarea>
+				</div>
+				<div class="layui-input-block">
+					<div class="layui-form-mid layui-word-aux">请输入200个字符以内的描述</div>
+				</div>
+			</div>
+			<div class="layui-form-item layui-hide">
+				<div class="layui-input-block">
+					<button type="button" class="layui-btn" lay-submit="" lay-filter="submit" id="submit">提交</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/employee/edit.js?v=20200105"></script>
+}

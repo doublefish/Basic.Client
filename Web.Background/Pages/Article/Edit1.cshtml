@@ -1,0 +1,37 @@
+﻿@page "{category}"
+@{
+	var Category = RouteData.Values["category"];
+	var title = "";
+	switch (Category)
+	{
+		case "AboutUs": title = "关于我们"; break;
+		case "ContactUs": title = "联系我们"; break;
+		case "FAQ": title = "常见问题"; break;
+		case "Security": title = "安全保障"; break;
+		case "SignupAgreement": title = "注册协议"; break;
+		case "TradingAgreement": title = "操盘协议"; break;
+		default: break;
+	}
+	ViewData["Title"] = title;
+}
+
+<div class="layui-card">
+	<div class="layui-card-body">
+		<form class="layui-form layui-form-pane" lay-filter="edit">
+			<input type="hidden" name="Category" id="Category" value="@Category" />
+			<div class="layui-form-item layui-form-text">
+				<div class="layui-input-block">
+					<textarea class="layui-textarea" name="Content" id="Content" placeholder="请输入" style="height:650px;"></textarea>
+				</div>
+			</div>
+			<div class="layui-form-item layui-hide">
+				<button type="button" class="layui-btn" lay-submit="" lay-filter="submit" id="submit">提交</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/content/tinymce/tinymce.min.js"></script>
+	<script src="~/js/article/edit1.js?v=20200105"></script>
+}

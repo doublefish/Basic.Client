@@ -1,0 +1,83 @@
+﻿@page "{id:int}"
+@{
+	ViewData["Title"] = "编辑";
+	var Id = RouteData.Values["id"];
+}
+
+<div class="layui-card">
+	<div class="layui-card-body">
+		<form class="layui-form" lay-filter="edit">
+			<input type="hidden" name="Id" id="Id" value="@Id" />
+			<div class="layui-form-item">
+				<label class="layui-form-label">名称</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="Name" id="Name" placeholder="请输入" lay-verify="required|name" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">类型</label>
+				<div class="layui-input-inline">
+					<select name="Type" id="Type" lay-verify="required">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+				<div class="layui-form-mid layui-word-aux">请选择类型</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">主题</label>
+				<div class="layui-input-block" id="Themes"></div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">价格</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Price" id="Price" placeholder="请输入" lay-verify="required|number" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">元</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">概要</label>
+				<div class="layui-input-block">
+					<textarea class="layui-textarea" name="Overview" id="Overview" placeholder="请输入" lay-verify="overview"></textarea>
+				</div>
+				<div class="layui-input-block">
+					<div class="layui-form-mid layui-word-aux">请输入500个字符以内的概要</div>
+				</div>
+			</div>
+			<div class="layui-form-item" style="display: none;" id="contents">
+				<label class="layui-form-label">内容</label>
+				<div class="layui-input-inline" style="width: 550px;">
+					<button type="button" class="layui-btn" data-type="Feature">产品特色</button>
+					<button type="button" class="layui-btn" data-type="Notice">预定须知</button>
+					<button type="button" class="layui-btn" data-type="Cost">费用说明</button>
+					<button type="button" class="layui-btn" data-type="Book">预定说明</button>
+				</div>
+				<div class="layui-form-mid layui-word-aux">请点击查看或修改内容</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">顺序</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="Sequence" id="Sequence" placeholder="请输入" lay-verify="required|number|sequence" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid layui-word-aux">请输入一个不小于零的数字</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">状态</label>
+				<div class="layui-input-inline">
+					<select name="Status" id="Status" lay-verify="required">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+				<div class="layui-form-mid layui-word-aux">请选择状态</div>
+			</div>
+			<div class="layui-form-item layui-hide">
+				<div class="layui-input-block">
+					<button type="button" class="layui-btn" lay-submit="" lay-filter="submit" id="submit">提交</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/product/edit.js?v=20200331"></script>
+}

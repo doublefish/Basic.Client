@@ -1,0 +1,32 @@
+﻿@page "{productId:int}"
+@{
+	ViewData["Title"] = "图片";
+	var ProductId = RouteData.Values["productId"];
+}
+
+@section Styles{
+	<link href="~/lib/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+	<style type="text/css">
+		#list { margin-top: 10px; }
+		#list li { height: 200px; margin-right: 5px; border: 2px solid white; cursor: pointer; }
+		#list img { max-width: 100%; max-height: 100%; }
+	</style>
+}
+
+<input type="hidden" name="productId" id="productId" value="@ProductId" />
+<div class="layui-card">
+	<div class="layui-card-body">
+		<div class="tools">
+			<button type="button" class="layui-btn" data-type="upload" style="display: none;" id="btnUpload"><i class="layui-icon layui-icon-upload"></i>上传图片</button>
+			<button type="button" class="layui-btn layui-btn-normal" data-type="updateCover" style="display: none;"><i class="layui-icon layui-icon-picture"></i>设为封面</button>
+			<button type="button" class="layui-btn layui-btn-normal" data-type="updateCover1" style="display: none;"><i class="layui-icon layui-icon-picture"></i>设为首页封面</button>
+			<button type="button" class="layui-btn layui-btn-danger" data-type="batchDel" style="display: none;"><i class="layui-icon layui-icon-delete"></i>删除</button>
+		</div>
+		<ul class="layui-row layui-col-space20" id="list"></ul>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
+	<script src="~/js/product/images.js?v=20200323"></script>
+}

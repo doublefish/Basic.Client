@@ -1,0 +1,50 @@
+﻿@page "{productId:int}"
+@{
+	ViewData["Title"] = "产品佣金规则";
+	var ProductId = RouteData.Values["productId"];
+}
+
+<input type="hidden" name="productId" id="productId" value="@ProductId" />
+<div class="layui-card">
+	<form class="layui-card-body layui-form" method="get" lay-filter="search">
+		<div class="layui-form-item">
+			<div class="layui-inline">
+				<label class="layui-form-label">有效期限</label>
+				<div class="layui-input-inline" style="width: 100px;">
+					<select name="year" id="year">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+				<div class="layui-input-inline" style="width: 100px;">
+					<select name="month" id="month">
+						<option value="" selected="selected">请选择</option>
+					</select>
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">创建时间</label>
+				<div class="layui-input-inline" style="width: 100px;">
+					<input type="text" class="layui-input" name="start" id="start" placeholder="请输入" autocomplete="off" />
+				</div>
+				<div class="layui-form-mid">-</div>
+				<div class="layui-input-inline" style="width: 100px;">
+					<input type="text" class="layui-input" name="end" id="end" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-inline">
+				<button type="submit" class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon layui-icon-search layuiadmin-button-btn"></i></button>
+			</div>
+		</div>
+	</form>
+	<div class="layui-card-body">
+		<div class="tools">
+			<button type="button" class="layui-btn" data-type="add" style="display: none;"><i class="layui-icon layui-icon-add-circle"></i>添加</button>
+			<button type="button" class="layui-btn layui-btn-danger" data-type="batchDel" style="display: none;"><i class="layui-icon layui-icon-delete"></i>删除</button>
+		</div>
+		<table lay-filter="list" id="list"></table>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/product/commissionRule/list.js?v=20200401"></script>
+}

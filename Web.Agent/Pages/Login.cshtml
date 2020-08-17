@@ -1,0 +1,95 @@
+﻿@page
+@{
+	ViewData["Title"] = "登录";
+}
+
+@section Styles{
+	<link href="~/css/login.css" rel="stylesheet" />
+}
+
+<div class="layadmin-user-login layadmin-user-display-show" id="LAY-user-login" style="display: none;">
+
+	<div class="layadmin-user-login-main">
+		<div class="layadmin-user-login-box layadmin-user-login-header">
+			<h2>@ViewData["SiteName"]</h2>
+			<p>后台管理系统 </p>
+		</div>
+		<div class="layadmin-user-login-box layadmin-user-login-body layui-form">
+			<div class="layui-form-item">
+				<label class="layadmin-user-login-icon layui-icon layui-icon-username" for="Username"></label>
+				<input type="text" class="layui-input" name="Username" id="Username" lay-verify="required" placeholder="用户名" />
+			</div>
+			<div class="layui-form-item">
+				<label class="layadmin-user-login-icon layui-icon layui-icon-password" for="Password"></label>
+				<input type="password" class="layui-input" name="Password" id="Password" lay-verify="required" placeholder="密码" />
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-row">
+					<div class="layui-col-xs7">
+						<label class="layadmin-user-login-icon layui-icon layui-icon-vercode" for="VCode"></label>
+						<input type="text" class="layui-input" name="VCode" id="VCode" lay-verify="" placeholder="图形验证码" />
+					</div>
+					<div class="layui-col-xs5">
+						<div style="margin-left: 10px;">
+							<img src="/images/vcode.png" class="layadmin-user-login-codeimg" id="VCodeImg" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-row">
+					<div class="layui-col-xs7">
+						<label class="layadmin-user-login-icon layui-icon layui-icon-vercode" for="SmsCode"></label>
+						<input type="text" class="layui-input" name="SmsCode" id="SmsCode" lay-verify="" placeholder="短信验证码" />
+					</div>
+					<div class="layui-col-xs5">
+						<div style="margin-left: 10px;">
+							<input type="button" class="layui-btn layui-btn-fluid" value="获取短信验证码" id="sendSmsCode" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item" style="margin-bottom: 20px;">
+				<input type="checkbox" name="Remember" id="Remember" lay-skin="primary" title="记住我" />
+				<a href="~/password/reset" class="layadmin-user-jump-change layadmin-link" style="margin-top: 7px;">忘记密码？</a>
+			</div>
+			<div class="layui-form-item">
+				<input type="submit" class="layui-btn layui-btn-fluid" lay-submit="" lay-filter="submit" value="登入" />
+			</div>
+			@*<div class="layui-trans layui-form-item layadmin-user-login-other">
+					<label>社交账号登入</label>
+					<a href="javascript:;"><i class="layui-icon layui-icon-login-qq"></i></a>
+					<a href="javascript:;"><i class="layui-icon layui-icon-login-wechat"></i></a>
+					<a href="javascript:;"><i class="layui-icon layui-icon-login-weibo"></i></a>
+					<a href="reg.html" class="layadmin-user-jump-change layadmin-link">注册帐号</a>
+				</div>*@
+		</div>
+	</div>
+
+	<div class="layui-trans layadmin-user-login-footer">
+		<p>© 2019 <a href="http://www.basic/com/" target="_blank">www.basic.com</a></p>
+		<p>
+			<span><a href="http://www.basic.com/" target="_blank">Go to Web Site</a></span>
+			<span><a href="http://m.basic.com/" target="_blank">Go to Wap Site</a></span>
+			<span><a href="http://m.basic.com/" target="_blank">Go to Wap Site</a></span>
+		</p>
+	</div>
+
+	<!--<div class="ladmin-user-login-theme">
+	  <script type="text/html" template>
+		<ul>
+		  <li data-theme=""><img src="{{ layui.setter.base }}style/res/bg-none.jpg"></li>
+		  <li data-theme="#03152A" style="background-color: #03152A;"></li>
+		  <li data-theme="#2E241B" style="background-color: #2E241B;"></li>
+		  <li data-theme="#50314F" style="background-color: #50314F;"></li>
+		  <li data-theme="#344058" style="background-color: #344058;"></li>
+		  <li data-theme="#20222A" style="background-color: #20222A;"></li>
+		</ul>
+	  </script>
+	</div>-->
+
+</div>
+
+@section Scripts{
+	<script src="~/js/login.js?v=20200105"></script>
+}

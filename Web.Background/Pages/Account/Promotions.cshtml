@@ -1,0 +1,45 @@
+﻿@page
+@{
+	ViewData["Title"] = "推广记录";
+}
+
+<div class="layui-card">
+	<form class="layui-card-body layui-form" method="get" lay-filter="search">
+		<div class="layui-form-item">
+			<div class="layui-inline">
+				<label class="layui-form-label">注册用户名</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="username" id="username" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">注册手机号</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="mobile" id="mobile" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">推广人用户</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="promoterUsername" id="promoterUsername" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">推广人手机</label>
+				<div class="layui-input-block">
+					<input type="text" class="layui-input" name="promoterMobile" id="promoterMobile" placeholder="请输入" autocomplete="off" />
+				</div>
+			</div>
+			<div class="layui-inline">
+				<button type="submit" class="layui-btn" lay-submit="" lay-filter="search"><i class="layui-icon layui-icon-search layuiadmin-button-btn"></i></button>
+			</div>
+		</div>
+	</form>
+	<div class="layui-card-body">
+		<table lay-filter="list" id="list"></table>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/js/account/promotions.js?v=20200408"></script>
+}
