@@ -3,8 +3,8 @@
  */
 var Config = {
 	SiteName: '基础框架',
-	CommonApiUrl: 'http://common.basic.com',
-	ApiUrl: 'http://foreground.basic.com/api',
+	CommonApiUrl: 'http://172.16.1.29:8010',
+	ApiUrl: 'http://172.16.1.29:8012/api',
 	WebSiteUrl: 'http://www.basic.com',
 	WapSiteUrl: 'http://m.basic.com',
 	Bank: {

@@ -3,7 +3,7 @@
  */
 var Config = {
 	SiteName: '基础框架代理商',
-	CommonApiUrl: 'http://common.basic.com',
+	CommonApiUrl: 'http://172.16.1.29:8010',
 	ApiUrl: 'http://agent.basic.com/api',
 	WebSiteUrl: 'http://www.basic.com',
 	WapSiteUrl: 'http://m.basic.com',
