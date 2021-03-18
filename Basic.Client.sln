@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wap", "Wap\Wap.csproj", "{C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "Web\Web.csproj", "{CDDCA5A7-97E2-4721-98AA-CCB56345DD3F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Agent", "Web.Agent\Web.Agent.csproj", "{60115F73-FEBE-4A15-86E7-6CA4AA3461D9}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web.Background", "Web.Background\Web.Background.csproj", "{C33BE7CE-7A45-438D-9B57-3C756271C63A}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{CDDCA5A7-97E2-4721-98AA-CCB56345DD3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDDCA5A7-97E2-4721-98AA-CCB56345DD3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDDCA5A7-97E2-4721-98AA-CCB56345DD3F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{60115F73-FEBE-4A15-86E7-6CA4AA3461D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60115F73-FEBE-4A15-86E7-6CA4AA3461D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{60115F73-FEBE-4A15-86E7-6CA4AA3461D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{60115F73-FEBE-4A15-86E7-6CA4AA3461D9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C33BE7CE-7A45-438D-9B57-3C756271C63A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C33BE7CE-7A45-438D-9B57-3C756271C63A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C33BE7CE-7A45-438D-9B57-3C756271C63A}.Release|Any CPU.ActiveCfg = Release|Any CPU
